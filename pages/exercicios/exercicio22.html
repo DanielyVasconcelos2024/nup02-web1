@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercicio 22 </title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+
+    <div class="barra-navegacao">
+        <a href="/index.html">Página Inicial</a>
+        <a href="../integrantes/daniely.html">Daniely</a>
+        <a href="../integrantes/luna.html"> Luna </a>
+        <a href="../integrantes/carol.html" >Carol </a>
+        <a href="../integrantes/leticia.html"> Leticia </a>
+        <a href="../integrantes/pedro.html"> Pedro </a>
+
+        <div class="menu-suspenso">
+            <button class="botao-suspenso">Exercícios</button>
+            <div class="conteudo-suspenso">
+                <a href="exercicio1.html">Exercício 1</a>
+                <a href="exercicio2.html">Exercício 2</a>
+                <a href="exercicio3.html">Exercício 3</a>
+                <a href="exercicio4.html">Exercício 4</a>
+                <a href="exercicio5.html">Exercício 5</a>
+                <a href="exercicio6.html">Exercício 6</a>
+                <a href="exercicio7.html">Exercício 7</a>
+                <a href="exercicio8.html">Exercício 8</a>
+                <a href="exercicio9.html">Exercício 9</a>
+                <a href="exercicio10.html">Exercício 10</a>
+                <a href="exercicio11.html">Exercício 11</a>
+                <a href="exercicio12.html">Exercício 12</a>
+                <a href="exercicio13.html">Exercício 13</a>
+                <a href="exercicio14.html">Exercício 14</a>
+                <a href="exercicio15.html">Exercício 15</a>
+                <a href="exercicio16.html">Exercício 16</a>
+                <a href="exercicio17.html">Exercício 17</a>
+                <a href="exercicio18.html">Exercício 18</a>
+                <a href="exercicio19.html">Exercício 19</a>
+                <a href="exercicio20.html">Exercício 20</a>
+                <a href="exercicio21.html">Exercício 21</a>
+                <a href="exercicio22.html">Exercício 22</a>
+                <a href="exercicio23.html">Exercício 23</a>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="conteudo-principal-pagina">
+        <h1>Desafio 29: Labirintos Subterrâneos</h1>
+        <p>Os túneis subterrâneos utilizados pela raça nativa do planeta Krawl funcionam como labirintos de diversos andares para impedir que forasteiros encontrem sua cidade escondida.</p>
+        <p>Você e sua equipe possuem o mapeamento dos túneis, mas agora precisam de uma forma de saber se é possível chegar de um ponto a outro sem ficarem presos pelas paredes dos túneis.</p>
+        <p>Além disso, os túneis não são seguros, sendo crucial avançar rapidamente, logo vocês também precisam descobrir qual é o caminho mais rápido para se chegar da entrada até a saída de cada andar.</p>
+        <p>Para isso você precisa desenvolver um programa que leia o mapa do túnel, representado por um array bidimensional, e verifique qual é o caminho mais rápido entre a entrada e a saída.</p>
+        <p><strong>A representação dos valores será feita com espaços (` `), tralhas (`#`), um começo (`S`) e um fim (`E`).</strong></p>
+        <p>Exemplo de Labirinto:</p>
+        <pre>
+S #
+  #
+  E</pre>
+
+        <label for="inputLabirinto">Digite o mapa do labirinto (cada linha em uma nova linha, use 'S' para início, 'E' para fim, '#' para parede e ' ' para caminho):</label>
+        <textarea id="inputLabirinto" rows="8" cols="40" placeholder="Exemplo:S #  #   E"></textarea>
+        
+        <button onclick="resolverLabirinto()">Resolver Labirinto</button>
+
+        <div class="resultado">
+            <h2>Mapa do Labirinto:</h2>
+            <pre id="outputMapa" class="output-box"></pre>
+            <h2>Caminho Mais Curto:</h2>
+            <p id="outputCaminhoCurto" class="output-box"></p>
+            <h2>Labirinto com Caminho Marcado:</h2>
+            <pre id="outputLabirintoSolucao" class="output-box"></pre>
+        </div>
+    </div>
+
+    <script src=""></script>
+</body>
+</html>

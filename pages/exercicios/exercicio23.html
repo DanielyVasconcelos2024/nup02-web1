@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercicio 23 </title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+
+    <div class="barra-navegacao">
+        <a href="/index.html">Página Inicial</a>
+        <a href="../integrantes/daniely.html">Daniely</a>
+        <a href="../integrantes/luna.html"> Luna </a>
+        <a href="../integrantes/carol.html" >Carol </a>
+        <a href="../integrantes/leticia.html"> Leticia </a>
+        <a href="../integrantes/pedro.html"> Pedro </a>
+
+        <div class="menu-suspenso">
+            <button class="botao-suspenso">Exercícios</button>
+            <div class="conteudo-suspenso">
+                <a href="exercicio1.html">Exercício 1</a>
+                <a href="exercicio2.html">Exercício 2</a>
+                <a href="exercicio3.html">Exercício 3</a>
+                <a href="exercicio4.html">Exercício 4</a>
+                <a href="exercicio5.html">Exercício 5</a>
+                <a href="exercicio6.html">Exercício 6</a>
+                <a href="exercicio7.html">Exercício 7</a>
+                <a href="exercicio8.html">Exercício 8</a>
+                <a href="exercicio9.html">Exercício 9</a>
+                <a href="exercicio10.html">Exercício 10</a>
+                <a href="exercicio11.html">Exercício 11</a>
+                <a href="exercicio12.html">Exercício 12</a>
+                <a href="exercicio13.html">Exercício 13</a>
+                <a href="exercicio14.html">Exercício 14</a>
+                <a href="exercicio15.html">Exercício 15</a>
+                <a href="exercicio16.html">Exercício 16</a>
+                <a href="exercicio17.html">Exercício 17</a>
+                <a href="exercicio18.html">Exercício 18</a>
+                <a href="exercicio19.html">Exercício 19</a>
+                <a href="exercicio20.html">Exercício 20</a>
+                <a href="exercicio21.html">Exercício 21</a>
+                <a href="exercicio22.html">Exercício 22</a>
+                <a href="exercicio23.html">Exercício 23</a>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="conteudo-principal-pagina">
+        <h1>Desafio 30: Planilha Portátil</h1>
+        <h2>Simulação de Planilha com Funções Básicas</h2>
+        <p>Um colega da equipe de tecnologia precisa da sua ajuda para desenvolver o programa que irá lidar com as planilhas de um dispositivo portátil. Você deve criar uma pequena aplicação capaz de ler e escrever em uma planilha, ter funções matemáticas básicas e conseguir abrir e salvar arquivos de planilhas.</p>
+        <p>A aplicação deve simular o funcionamento de uma planilha, armazenar um array bidimensional de células, e possuir no mínimo quatro funções principais: leitura de célula, escrita de célula, salvar em arquivo e abrir de um arquivo.</p>
+        <ul>
+            <li><strong>Leitura de célula:</strong> Recebe o nome da célula (ex: "A2", "C4") e retorna o valor.</li>
+            <li><strong>Escrita de célula:</strong> Recebe o nome da célula e um valor, e guarda esse valor.</li>
+            <li><strong>Fórmulas:</strong> Strings no formato <code>FORMULA(células)</code>. Células podem ser selecionadas individualmente (<code>A2;A5</code>) ou em grupo (<code>A2:A5</code>). Exemplo: <code>SUM(A1:B2)</code>, <code>AVG(C1;C3;C5)</code>.</li>
+            <li><strong>Salvar/Abrir:</strong> Simulam a manipulação de arquivos (no navegador, será via download/upload).</li>
+        </ul>
+
+        <h3>Operações da Planilha:</h3>
+        <div class="operacoes-planilha">
+            <label for="cellNameRead">Ler Célula (ex: A1):</label>
+            <input type="text" id="cellNameRead" placeholder="A1">
+            <button onclick="readCell()">Ler</button>
+            <p id="outputReadCell" class="output-box"></p>
+        </div>
+
+        <div class="operacoes-planilha">
+            <label for="cellNameWrite">Escrever Célula (ex: B2):</label>
+            <input type="text" id="cellNameWrite" placeholder="B2">
+            <label for="cellValueWrite">Valor:</label>
+            <input type="text" id="cellValueWrite" placeholder="Olá Mundo ou =SUM(A1:A2)">
+            <button onclick="writeCell()">Escrever</button>
+            <p id="outputWriteCell" class="output-box"></p>
+        </div>
+
+        <div class="operacoes-planilha">
+            <button onclick="saveSpreadsheet()">Salvar Planilha</button>
+            <p class="small-text">(Será baixado como arquivo .json)</p>
+        </div>
+
+        <div class="operacoes-planilha">
+            <label for="fileInput">Abrir Planilha:</label>
+            <input type="file" id="fileInput" accept=".json">
+            <button onclick="loadSpreadsheet()">Carregar Arquivo</button>
+            <p class="small-text">(Selecione um arquivo .json salvo anteriormente)</p>
+        </div>
+
+        <h3>Visualização da Planilha (limitado a 5x5 para exibição):</h3>
+        <div id="spreadsheetDisplay" class="spreadsheet-display output-box"></div>
+    </div>
+
+    <script src=""></script>
+    
+</body>
+</html>
