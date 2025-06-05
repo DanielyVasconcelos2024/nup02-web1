@@ -1,17 +1,11 @@
-function inverterArray() {
-    const input = document.getElementById("inputArray").value;
-    const elementos = input.split(",").map(e => e.trim()); 
+function gerarChunks(n) {
+    if (n <= 0) return "";
+    if (n === 1) return "chunk";
+    return "chunk-" + gerarChunks(n - 1);
+}
 
-    const original = [];
-    for (let i = 0; i < elementos.length; i++) {
-        original[i] = elementos[i]; 
-    }
-
-    const invertido = [];
-    for (let i = elementos.length - 1; i >= 0; i--) {
-        invertido[elementos.length - 1 - i] = elementos[i];
-    }
-
-    document.getElementById("outputOriginal").innerText = original.join(", ");
-    document.getElementById("outputInvertido").innerText = invertido.join(", ");
+function executarRecursao() {
+    const valor = parseInt(document.getElementById("numeroChunks").value);
+    const resultado = gerarChunks(valor);
+    document.getElementById("output").innerText = resultado;
 }
