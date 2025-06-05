@@ -1,17 +1,17 @@
-function calcularElevacaoQuadratica() {
-    const numero = document.getElementById("inputNumero").value;
-    const numeroStr = numero.toString();
+function inverterArray() {
+    const input = document.getElementById("inputArray").value;
+    const elementos = input.split(",").map(e => e.trim()); 
 
-    let resultado = "";
-
-    for (let i = 0; i < numeroStr.length; i++) {
-        const digito = parseInt(numeroStr[i]);
-        if (!isNaN(digito)) {
-            const quadrado = digito * digito;
-            resultado += quadrado.toString();
-        }
+    const original = [];
+    for (let i = 0; i < elementos.length; i++) {
+        original[i] = elementos[i]; 
     }
 
-    document.getElementById("outputOriginal").innerText = numero;
-    document.getElementById("outputQuadradoConcatenado").innerText = parseInt(resultado);
+    const invertido = [];
+    for (let i = elementos.length - 1; i >= 0; i--) {
+        invertido[elementos.length - 1 - i] = elementos[i];
+    }
+
+    document.getElementById("outputOriginal").innerText = original.join(", ");
+    document.getElementById("outputInvertido").innerText = invertido.join(", ");
 }
