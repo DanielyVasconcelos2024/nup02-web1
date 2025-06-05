@@ -4,7 +4,8 @@ function gerarChunks(n) {
     return "chunk-" + gerarChunks(n - 1);
 }
 
-console.log(gerarChunks(4)); 
-console.log(gerarChunks(1)); 
-console.log(gerarChunks(8)); 
-console.log(gerarChunks(2)); 
+function executarRecursao() {
+    const valor = parseInt(document.getElementById("numeroChunks").value);
+    const resultado = gerarChunks(valor);
+    document.getElementById("output").innerText = resultado;
+}
