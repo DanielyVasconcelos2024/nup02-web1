@@ -1,11 +1,6 @@
-function gerarChunks(n) {
-    if (n <= 0) return "";
-    if (n === 1) return "chunk";
-    return "chunk-" + gerarChunks(n - 1);
-}
-
-function executarRecursao() {
-    const valor = parseInt(document.getElementById("numeroChunks").value);
-    const resultado = gerarChunks(valor);
-    document.getElementById("output").innerText = resultado;
+function calcularMedia(...numeros) {
+    if (numeros.length === 0) return 0;
+    
+    let soma = numeros.reduce((acc, valor) => acc + valor, 0);
+    return soma / numeros.length;
 }
