@@ -13,5 +13,5 @@ function calcularElevacaoQuadratica() {
     }
 
     document.getElementById("outputOriginal").innerText = numero;
-    document.getElementById("outputQuadradoConcatenado").innerText = parseInt(resultado);
+    document.getElementById("outputQuadradoConcatenado").innerText = parseInt (resultado);
 }
