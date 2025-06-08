@@ -3,7 +3,6 @@ function resolverLabirinto() {
 
     let labirinto;
     try {
-        // Avalia o texto como um array JavaScript
         labirinto = eval(input);
     } catch (e) {
         alert("Erro ao interpretar o labirinto. Verifique a sintaxe.");
