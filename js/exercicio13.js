@@ -27,3 +27,11 @@ function verificarCodigoIdentificacao(numero) {
         ? "Código válido"
         : `Código inválido. O correto seria: ${str.slice(0, -1)}${verificadorCalculado}`;
 }
+
+function validarCodigoNave() {
+    const input = document.getElementById("inputCodigoNave").value.trim();
+    const resultado = verificarCodigoIdentificacao(input);
+
+    document.getElementById("outputCodigoOriginal").textContent = input;
+    document.getElementById("outputValidacao").textContent = resultado;
+}
