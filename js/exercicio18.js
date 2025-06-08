@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class Equation {
     constructor(a = 0, b = 0, c = 0) {
         this.a = a;
@@ -171,5 +170,3 @@ function resolverEquacao() {
     document.getElementById('outputResolucao').innerText = resolucao;
     document.getElementById('outputResultados').innerText = JSON.stringify(raizes);
 }
-
->>>>>>> 98b96c6b462e330c62d01cfaaaa9c76504715c3a
