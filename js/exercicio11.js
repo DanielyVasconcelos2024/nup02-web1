@@ -15,9 +15,9 @@ function gerarCoordenadas() {
 
     const coordenadas = [];
 
-    for (let j = 0; j <= y; j++) {
-        for (let i = 0; i <= x; i++) {
-            coordenadas.push(`(${i}, ${j})`);
+    for (let j = 0; j <= x; j++) {
+        for (let i = 0; i <= y; i++) {
+            coordenadas.push(`(${j}, ${i})`);
         }
     }
 
