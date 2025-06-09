@@ -72,6 +72,6 @@ function resolverEquacao() {
         return;
     }
 
-    document.getElementById('outputResolucao').textContent = resultado.passos.join('\n');
+    document.getElementById('outputResolucao').innerHTML = resultado.passos.join('<br>');
     document.getElementById('outputResultados').textContent = JSON.stringify(resultado.raizes);
 } 
