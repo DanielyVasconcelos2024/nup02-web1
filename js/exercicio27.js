@@ -19,7 +19,6 @@ function encontrarConexoes() {
     function buscar(obj) {
         if (typeof obj !== "object" || obj === null) return;
 
-        // Se for 'connection' direto
         if (obj.connection && typeof obj.connection === "object") {
             const c = obj.connection;
             if (c._id && c.label) {
@@ -27,7 +26,6 @@ function encontrarConexoes() {
             }
         }
 
-        // Se for 'connections' (array)
         if (Array.isArray(obj.connections)) {
             obj.connections.forEach(conn => {
                 if (conn._id && conn.label) {
@@ -36,7 +34,6 @@ function encontrarConexoes() {
             });
         }
 
-        // Recursão em todas as chaves do objeto
         for (const chave in obj) {
             if (typeof obj[chave] === "object") {
                 buscar(obj[chave]);
