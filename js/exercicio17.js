@@ -6,13 +6,17 @@ function getPalavra(){
     return document.getElementById('inputPalavra').value;
 }
 
-function getIndices(){
-    string_indices = document.getElementById('inputIndices').value;
-    lista_indices = string_indices.split(',');
-    let indices = []
+function getIndices() {
+    let string_indices = document.getElementById('inputIndices').value;
+    let lista_indices = string_indices.split(',');
+    let indices = [];
 
-    for(let indice of lista_indices){
-        indices.push(parseInt(indice));
+    for (let indice of lista_indices) {
+        indice = indice.trim();
+        let num = parseInt(indice);
+        if (!isNaN(num) && num >= 0) {
+            indices.push(num);
+        }
     }
 
     return indices;
@@ -43,7 +47,7 @@ function inserirPalavra(){
         if(indice > texto.length){
             continue;
         }
-        texto = texto.slice(0, indice) + palavra + texto.slice(indice);
+        texto = texto.slice(0, indice) + palavra + " " + texto.slice(indice);
     }
 
     let displayTexto = getDisplayTexto();
