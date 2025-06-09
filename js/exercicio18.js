@@ -11,7 +11,7 @@ class Equation {
 
         const { a, b, c } = this;
 
-        if (a === 0 && b === 0 && c === 0) {
+        if (isNaN(a) || isNaN(b) || isNaN(c)) {
             return { erro: 'Erro! Nenhum parâmetro informado.', raizes: [] };
         }
 
